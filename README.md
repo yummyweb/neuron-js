@@ -18,4 +18,4 @@ const neuronjs = neuron()
 const server = neuronjs.listen(5000, () => console.log(`Server running on ${5000}`))
 ```
 
-Check out the GitHub repository of the project to see some more examples.
+Check out the GitHub repository of the project to see some more examples.# neuron-js
