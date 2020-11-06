@@ -2,3 +2,4 @@ docs/
 example/
 experimental/
 .deepsource.toml
+.gitignore
