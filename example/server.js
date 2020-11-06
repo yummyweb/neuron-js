@@ -1,4 +1,4 @@
-const neuron = require('../src/neuron')
+const neuron = require('@yummyweb/neuronjs')
 const cors = require('cors');
 
 // API data
@@ -11,7 +11,7 @@ let apiData = {"data":[{"id":0,"name":"Esmiye","surname":"Tefekk\u00fcl","email"
 // const successFunc = (res, data) => {
 //     res.status(200).send(data)
 // }
-
+console.log(neuron)
 const neuronjs = neuron();
 
 neuronjs.use(cors());

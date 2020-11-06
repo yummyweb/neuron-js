@@ -1,6 +1,6 @@
 {
-  "name": "@yummyweb/neuronjs",
-  "version": "1.0.0",
+  "name": "@neuronjs/neuronjs",
+  "version": "1.0.4",
   "description": "Server-side framework for Node.js. Based on Express.js",
   "main": "index.js",
   "directories": {
