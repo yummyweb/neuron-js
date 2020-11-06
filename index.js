@@ -1,3 +1,3 @@
-const neuron = require('./src/neuron')
+import neuron from './src/neuron.js'
 
-module.exports.neuron = neuron
+export default neuron
