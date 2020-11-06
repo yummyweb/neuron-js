@@ -1,3 +1,4 @@
-doc/
+docs/
 example/
 experimental/
+.deepsource.toml
