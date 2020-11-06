@@ -57,6 +57,12 @@ class Router {
 		route.delete(handler);
 		return this;
 	}
+
+	put(path, handler) {
+		const route = this.route(path);
+		route.put(handler);
+		return this;
+	}
 }
 
 module.exports = Router;

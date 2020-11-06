@@ -39,6 +39,15 @@ class Route {
 		return this;
 	}
 
+	put(handler) {
+		const layer = new Layer('/', handler);
+		layer.method = 'put';
+
+		this.methods['put'] = true;
+		this.stack.push(layer);
+		return this;
+	}
+
 	dispatch(req, res) {
 		const method = req.method.toLowerCase();
 
