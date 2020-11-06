@@ -1,10 +1,6 @@
 {
   "name": "@antriksh123/neuronjs",
-<<<<<<< HEAD
   "version": "2.0.2",
-=======
-  "version": "2.0.1",
->>>>>>> a39fca2e0786fef4cc1a2f8fe6ce35a36336a982
   "description": "A Fast and Lightweight Server-side Framework for Node.js.",
   "main": "index.js",
   "type": "module",
