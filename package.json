@@ -1,12 +1,10 @@
 {
   "name": "@yummyweb/neuronjs",
-  "version": "1.0.5",
+  "version": "2.0.1",
   "description": "A Fast and Lightweight Server-side Framework for Node.js.",
   "main": "index.js",
-  "directories": {
-    "doc": "doc",
-    "example": "example"
-  },
+  "type": "module",
+  "directories": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/antriksh123/neuron-js/issues"
   },
-  "homepage": "https://github.com/antriksh123/neuron-js#readme"
+  "homepage": "https://github.com/antriksh123/neuron-js#readme",
+  "dependencies": {
+    "squirrelly": "^8.0.8"
+  }
 }
