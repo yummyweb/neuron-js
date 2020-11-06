@@ -28,8 +28,5 @@
   "homepage": "https://github.com/antriksh123/neuron-js#readme",
   "dependencies": {
     "squirrelly": "^8.0.8"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
