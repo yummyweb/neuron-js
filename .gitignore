@@ -3,6 +3,7 @@
 
 # Personal
 experimental/
+.deepsource.toml
 
 # Logs
 logs
