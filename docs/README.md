@@ -78,3 +78,9 @@ neuronjs.POST('/post', (req, res) => {
 
 const server = neuronjs.listen(5000, () => console.log(`Server running on ${5000}`))
 ```
+
+#### Templates and Template Engine
+
+Neuron uses a new template engine called `squirrelly`, which is not very well known, so for more information on `squirrelly` and how it works, check out [the squirrelly docs](https://squirrelly.js.org/). To load a new view or template, instead of using `res.render()` as you would in Express, we can use `neuronjs.view()` which takes view/template name as the first arguement. It takes context as the second arguement and a function as third. Before talking about context, the third function arguement basically, takes parameters in that function. The parameters are: `err`, `res` and `req`. `res` and `req` are response and request respectively, but error is the returned error which you get back with which you can check for error and do something based on that.
+
+!> Make sure that the first arguement for **neuronjs.view()** is within the directory specified in `configureView()`
