@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-### Description
+### Info <!-- {docsify-ignore} -->
 
 Neuron JS is the server-side framework you are waiting for. It's as elegant and easy to use as Express JS but at the same time much more smooth and experiential. With an MVC-like architecture whether you are coming from PHP or Django, this framework is suited to your needs.
 
