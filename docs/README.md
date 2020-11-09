@@ -12,6 +12,8 @@ Neuron JS is the server-side framework you are waiting for. It's as elegant and 
 npm i @yummyweb/neuronjs
 ```
 
+## Usage
+
 ### Basic Usage
 
 ```javascript
@@ -50,3 +52,29 @@ const server = neuronjs.listen(5000, () => console.log(`Server running on ${5000
 ```
 
 The above code is an example of making `POST` and `GET` requests. The `req.body.sentData` is the data you send through the body of the request. `sentData` is the json attribute of the body of request. Body parser is neccessary for the post request to work i.e. the body attribute is only accessbile if body parser is in the middleware.
+
+### Views
+
+Since Neuron JS is MVC-based, there has to be views and there are. So to use views you can configure views by `neuronjs.configureView('templates')` where `templates` is the directory name which contains the views/templates. `configureView()` takes one arguement, as I said the directory name. If your views and templates are in the same directory as your `index.js` or `server.js`, then just use `.` as the first arguement. If I add the `configureViews()` to the above exmaple it will look like.
+
+```javascript
+const neuron = require('neuronjs')
+const bodyParser = require('body-parser')
+
+const neuronjs = neuron()
+neuronjs.configureView('templates')
+
+// Body parser middleware
+neuronjs.use(bodyParser())
+
+neuronjs.GET('/', (req, res) => {
+    res.write("Demo")
+    res.end()
+})
+
+neuronjs.POST('/post', (req, res) => {
+    res.json({ "sentData": req.body.sentData })
+})
+
+const server = neuronjs.listen(5000, () => console.log(`Server running on ${5000}`))
+```
