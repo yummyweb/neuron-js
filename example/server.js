@@ -23,15 +23,15 @@
 
 // const server = neuronjs.listen(5000, () => console.log(`Server running on ${5000}`));
 
-import neuron from '../src/neuron.js'
+import neuron from ''
 
 const neuronjs = neuron();
 neuronjs.configureView('template')
 
 neuronjs.GET('/', (req, res) => {
-    neuronjs.view('home.html', {res, req, fun: "very fun"}, (err, res, req) => {
+    neuronjs.view('home.html', {res, req, fun: "superr fun"}, (err, res, req) => {
         if (err) throw err
     })
 })
 
-const server = neuronjs.listen(5000, () => console.log(`Server running on ${5000}`));
+const server = neuronjs.listen(7000, () => console.log(`Server running on ${7000}`));
