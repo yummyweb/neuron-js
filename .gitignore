@@ -2,7 +2,6 @@
 .npmrc
 
 # Personal
-experimental/
 .deepsource.toml
 
 # Logs
