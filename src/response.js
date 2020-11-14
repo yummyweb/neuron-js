@@ -17,11 +17,7 @@ function response (res) {
   }
 
   res.json = content => {
-    try {
-      content = JSON.stringify(content)
-    } catch (err) {
-      throw err
-    }
+    content = JSON.stringify(content)
     res.setHeader('Content-Type', 'application/json')
     return end(content)
   }

@@ -67,7 +67,7 @@ function Neuron () {
   function configureView (templatedDir) {
     if (typeof (templatedDir) === 'string') {
       templateddirectory = templatedDir
-    } else throw 'TypeError: Wrong Type. Expected String got ' + typeof (templateName)
+    } else throw TypeError('Wrong Type. Expected String got ' + typeof (templateName))
   }
 
   function view (templateName, ctx, cb) {
@@ -77,7 +77,7 @@ function Neuron () {
         const compiled = Sqrl.render(data.toString(), ctx)
         ctx.res.send(compiled)
       })
-    } else throw 'TypeError: Wrong Type. Expected String got ' + typeof (templateName)
+    } else throw TypeError('Wrong Type. Expected String got ' + typeof (templateName))
   }
 
   function listen (port, cb) {
