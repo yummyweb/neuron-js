@@ -28,5 +28,8 @@
   "homepage": "https://github.com/antriksh123/neuron-js#readme",
   "dependencies": {
     "squirrelly": "^8.0.8"
+  },
+  "devDependencies": {
+    "standard": "^16.0.2"
   }
 }

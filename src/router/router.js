@@ -2,67 +2,67 @@ import Layer from './layer.js'
 import Route from './route.js'
 
 class Router {
-	constructor() {
-		this.stack = [
-			new Layer('*', (req, res) => {
-				res.statusCode = 404;
-				res.setHeader('Content-Type', 'text/plain');
-				res.end(`Cannot find ${req.url}`);
-			})
-		];
-	}
+  constructor () {
+    this.stack = [
+      new Layer('*', (req, res) => {
+        res.statusCode = 404
+        res.setHeader('Content-Type', 'text/plain')
+        res.end(`Cannot find ${req.url}`)
+      })
+    ]
+  }
 
-	handle(req, res) {
-		const method = req.method;
-		let found = false;
+  handle (req, res) {
+    const method = req.method
+    let found = false
 
-		this.stack.some((item, index) => {
-			if (index === 0) {
-				return false;
-			}
-			const { matched = false, params = {} } = item.match(req.pathname);
-			if (matched && item.route && item.route.requestHandler(method)) {
-				found = true;
-				req.params = params;
-				return item.requestHandler(req, res);
-			}
-		});
+    this.stack.some((item, index) => {
+      if (index === 0) {
+        return false
+      }
+      const { matched = false, params = {} } = item.match(req.pathname)
+      if (matched && item.route && item.route.requestHandler(method)) {
+        found = true
+        req.params = params
+        return item.requestHandler(req, res)
+      }
+    })
 
-		return found ? null : this.stack[0].requestHandler(req, res);
-	}
+    return found ? null : this.stack[0].requestHandler(req, res)
+  }
 
-	route(path) {
-		const route = new Route(path);
-		const layer = new Layer(path, (req, res) => route.dispatch(req, res));
-		layer.route = route;
-		this.stack.push(layer);
+  route (path) {
+    const route = new Route(path)
+    const layer = new Layer(path, (req, res) => route.dispatch(req, res))
+    layer.route = route
+    this.stack.push(layer)
 
-		return route;
-	}
+    return route
+  }
 
-	get(path, handler) {
-		const route = this.route(path);
-		route.get(handler);
-		return this;
-	}
+  get (path, handler) {
+    const route = this.route(path)
+    route.get(handler)
+    return this
+  }
 
-	post(path, handler) {
-		const route = this.route(path);
-		route.post(handler);
-		return this;
-    }
-    
-    delete(path, handler) {
-		const route = this.route(path);
-		route.delete(handler);
-		return this;
-	}
+  post (path, handler) {
+    const route = this.route(path)
+    route.post(handler)
+    return this
+  }
 
-	put(path, handler) {
-		const route = this.route(path);
-		route.put(handler);
-		return this;
-	}
+  delete (path, handler) {
+    const route = this.route(path)
+    route.delete(handler)
+    return this
+  }
+
+  put (path, handler) {
+    const route = this.route(path)
+    route.put(handler)
+    return this
+  }
 }
 
 export default Router
