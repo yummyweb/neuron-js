@@ -2,7 +2,7 @@ import { matchPath } from '../utils.js'
 
 class Layer {
   // Setting up path and handler
-  constructor(path, handler) {
+  constructor (path, handler) {
     this.handler = handler
     this.name = handler.name || '<anonymous>'
     this.path = path
@@ -10,9 +10,8 @@ class Layer {
 
   // If current request path matches the layer's path
   // then handling for current path
-  requestHandler(...args) {
-    const handler = this.handler
-    handler ? handler(...args) : null
+  requestHandler (...args) {
+    this.handler ? this.handler(...args) : null
   }
 
   // To match current request path with
@@ -20,7 +19,7 @@ class Layer {
 
   // SETUP: app.get('/login', (req, res) => {})
   // CURRENT REQUEST: GET /login
-  match(path) {
+  match (path) {
     return matchPath(this.path, path)
   }
 }

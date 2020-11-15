@@ -1,7 +1,8 @@
-import { URL } from 'url'
+import url from 'url'
 
 function request (req) {
-  const parsedUrl = new URL(`${req.headers.host}${req.url}`)
+  // const parsedUrl = new URL(req.url, req.headers.host)
+  const parsedUrl = url.parse(`${req.headers.host}${req.url}`)
   const keys = Object.keys(parsedUrl)
   keys.forEach(key => (req[key] = parsedUrl[key]))
 }
