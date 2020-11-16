@@ -5,6 +5,9 @@
     <a href="https://www.npmjs.com/package/@yummyweb/neuronjs">
         <img src="https://img.shields.io/npm/v/@yummyweb/neuronjs">
     </a>
+    <a>
+        <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/af05fc88a4514fd1be85ebadc7f57a33">
+    </a>
 </p>
 
 # Neuron JS
