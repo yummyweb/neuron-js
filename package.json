@@ -1,6 +1,6 @@
 {
   "name": "@yummyweb/neuronjs",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "A Fast and Lightweight Server-side Framework for Node.js.",
   "main": "index.js",
   "type": "module",
