@@ -2,3 +2,4 @@ docs/
 .deepsource.toml
 .gitignore
 test/
+.vscode/
