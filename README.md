@@ -1,6 +1,11 @@
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-[![npm](https://img.shields.io/npm/v/@yummyweb/neuronjs)](https://www.npmjs.com/package/@yummyweb/neuronjs)
+<p>
+    <a href="https://standardjs.com">
+        <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
+    </a>
+    <a href="https://www.npmjs.com/package/@yummyweb/neuronjs">
+        <img src="https://img.shields.io/npm/v/@yummyweb/neuronjs">
+    </a>
+</p>
 
 # Neuron JS
 
