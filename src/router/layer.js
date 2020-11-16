@@ -11,7 +11,8 @@ class Layer {
   // If current request path matches the layer's path
   // then handling for current path
   requestHandler (...args) {
-    this.handler ? this.handler(...args) : null
+    const handler = this.handler ? this.handler(...args) : null
+    return handler
   }
 
   // To match current request path with
