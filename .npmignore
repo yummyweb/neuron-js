@@ -1,3 +1,4 @@
 docs/
 .deepsource.toml
 .gitignore
+test/
