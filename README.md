@@ -8,6 +8,9 @@
     <a>
         <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/af05fc88a4514fd1be85ebadc7f57a33">
     </a>
+    <a href="https://deepscan.io">
+        <img src="https://deepscan.io/api/teams/11810/projects/14743/branches/281223/badge/grade.svg" alt="DeepScan grade">
+    </a>
 </p>
 
 # Neuron JS
